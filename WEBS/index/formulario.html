@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title> Formulario </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="Marisol">
+    <meta name="Description" content="repaso del HEAD y los estilos en cascada">
+    <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python">
+    <link rel="shortcut icon" href="FAVICONS/book-journal-whills-solid.svg" type="image/x-icon">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+        
+        form {
+            text-align: justify;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 110px;
+            margin-left: 80px;
+        }
+        
+        p {
+            text-align: justify;
+            margin-right: 110px;
+            margin-left: 80px;
+            color: coral;
+        }
+        
+        b {
+            text-align: justify;
+            margin-right: 100px;
+            margin-left: 80px;
+            text-decoration: underline;
+            color: rgba(255, 9, 9, 0.83);
+        }
+        
+        #formulario3 {
+            text-align: right;
+            margin-top: -5.5em;
+            margin-right: 100px;
+            margin-left: 5em;
+        }
+        
+        #formulario4 {
+            text-align: right;
+            margin-top: -24em;
+            margin-right: 100px;
+            margin-left: 5em;
+            margin-bottom: 52vh;
+        }
+        
+        .button1 {
+            margin-left: 63em;
+            src: url('http://127.0.0.1:5500/index.html');
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        .button2 {
+            margin-left: 70px;
+            cursor: pointer;
+        }
+    </style>
+
+    <h1> Formulario HTML</h1>
+    <b>Datos personales</b>
+    <form action="/action_page.php">
+        <label for="fname">Introduzca nombre:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="Nombre"><br>
+        <label for="lname">Introduzca apellidos:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Apellidos"><br>
+        <label for="fname"> Introduzca edad:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="Edad"><br>
+        <label for="lname"> Descripción:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Introduzca su biografía"><br>
+    </form>
+
+    <p style="text-decoration: underline;"><strong>Escoge tu lenguaje Web favorito:</strong></p>
+
+    <form>
+        <input type="radio" id="html" name="fav_language" placeholder="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" placeholder="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+        <input type="radio" id="JAVA" name="fav_language" placeholder="JAVA">
+        <label for="JAVA">JAVA</label><br>
+        <input type="radio" id="SQL" name="fav_language" placeholder="SQL">
+        <label for="SQL">SQL</label><br><br>
+
+    </form>
+    <form id="formulario4">
+        <label id="usuario" for="username">Usuario:</label><br>
+        <input type="text" id="username" placeholder="Introduzca nombre de usuario" size="23px"><br>
+        <label for="pwd">Contraseña:</label><br>
+        <input type="password" id="pwd" placeholder="Introduzca contraseña" size="23px"><br><br>
+    </form>
+
+
+    <form id="formulario3">
+        <label for="cars">Elija titulación:</label>
+        <select id="titulacion" name="titulos">
+              <option value="ESO">ESO</option>
+              <option value="Bach">Bachillerato</option>
+              <option value="FP Superior">FP Superior</option>
+              <option value="UNI">Carrera universitaria</option>
+            </select>
+    </form>
+    <br><br><br><br>
+    <footer>
+        <input style="margin-left: 40%;" type="button" onclick=history.back(); value="Hecho " />
+    </footer>
+    <script>
+        const usuario = {
+            Nombre: document.getElementById(" username "),
+            fullName: function() {
+                return "Bienvenido, " +
+                    this.Nombre
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
