@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title> PORTFOLIO </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="Marisol">
+    <meta name="Description" content="repaso del HEAD y los estilos en cascada">
+    <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python">
+    <link rel="shortcut icon" href="FAVICONS/book-journal-whills-solid.svg" style="color: green;">
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/estilos1.css">
+    <link rel="stylesheet" href="css/estilos2.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-image: url("https://thumbs.dreamstime.com/b/fondo-del-extracto-programador-de-la-codificaci%C3%B3n-escritura-lenguaje-programaci%C3%B3n-110861313.jpg");
+            background-repeat: no-repeat;
+            background-position: absolute;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .header {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        #navbar {
+            overflow: hidden;
+            background-color: rgba(127, 255, 212, 0.765);
+        }
+        
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        #navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        
+        .content {
+            padding: 16px;
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .sticky+.content {
+            padding-top: 60px;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: rgba(127, 255, 212, 0.765);
+        }
+        
+        .topnav a {
+            float: left;
+            color: #0400ff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            background-color: rgb(221, 221, 221);
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: #ab03ffa1;
+            color: white;
+        }
+        
+        .topnav-centered a {
+            float: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .topnav-right {
+            float: right;
+        }
+        /* Responsive navigation menu (for mobile devices) */
+        
+        @media screen and (max-width: 940px) {
+            .topnav a,
+            .topnav-right {
+                float: none;
+                display: block;
+            }
+            .topnav-centered a {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+            }
+            i {
+                float: none;
+                display: block;
+            }
+        }
+        
+        i {
+            text-align: left;
+            size: 23px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        #linkinsta {
+            src: url('https://www.instagram.com/mariokiller33/');
+        }
+        
+        mark {
+            background-color: rgba(127, 255, 212, 0.808);
+        }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
+    <!---------para Facebook--------->
+    <meta property="og:description" content="The Portfolio of Freelance Designer Nick Jones" />
+    <meta property="og:title" content="EDteam - Educación con honestidad">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ed.team/" &gt;>
+    <meta property="og:image" content="https://ed.teamhttps://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg" &gt;>
+    <!--<script src="main.js"></script>-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f57871a410.js" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <script>
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                }
+            }
+        }
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="https://www.instagram.com/mariokiller33/" title="Instagram"><i class="fab fa-instagram" style="font-size: 48px;color:rgba(174, 255, 13, 0.813) ;"></i></a>
+        <a href="https://twitter.com/mariokiller44/status/1528033441593311236" title="Twitter"><i class="fab fa-twitter" style="font-size: 48px;color: blue;"></i></a>
+        <a href="https://youtu.be/v4NtH9Bk4zE" style="text-align: right;" title="Youtube"><i class="fab fa-youtube" style="color: red; font-size: 48px;"></i></a>
+        <h1> <mark> Página principal del uso del HTML </mark>
+        </h1>
+    </div>
+    <div id="navbar">
+
+        <!-- Centered link -->
+        <div class="topnav-centered">
+            <a href="#home" href="javascript:void(0)" class="active">Home</a>
+        </div>
+
+        <!-- Left-aligned links (default) -->
+        <a href="linksExternos.html" href="javascript:void(0)">Localizacion y video de youtube</a>
+        <a href="#contact" href="javascript:void(0)">Quienes somos</a>
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <a href="javascript:void(0)">Search</a>
+            <a href="javascript:void(0)">About</a>
+        </div>
+
+    </div>
+    <br>
+    <div class="content">
+        <p style="background-color: white ;">Bienvenidos a la pagina principal del Blog del curso 2021-2022 de lenguaje de Marca. Sigue los links del menu para investigar. <br> Esta pagina esta sponsorizada por Deep Web, fiel seguidor de forocoches. Aqui esta la estructura del texto argumentativo:
+            <br><br> Son tres los elementos o partes en las que se divide generalmente una argumentación: la tesis, el cuerpo argumentativo y la conclusión. A pesar de que la mayoría de los textos argumentativos suele presentar estos tres elementos, puede
+            ocurrir que esté ausente alguno de ellos: <br><strong>La tesis</strong> en muchos casos, es sustituida por una exposición inicial sobre el tema que se va a tratar. Es muy importante, por esta razón, señalar que el texto expositivo y argumentativo
+            funcionan conjuntamente en el caso de la argumentación: no podemos defender ideas o situaciones sin haberlas puesto, previamente, en conocimiento de nuestro receptor. La tesis Es la idea fundamental en torno a la que se reflexiona; puede aparecer
+            al principio o al final del texto y ocupa un párrafo, también al inicio o al final. En este último caso muchas veces se omite la conclusión por considerarse innecesaria, pues es la tesis la que ocupa su lugar. Es muy importante que la tesis
+            esté formulada de forma clara, dado que es el núcleo en torno al cual gira la argumentación que se va a desarrollar a continuación. El cuerpo de la argumentación A partir del planteamiento de la tesis, en un nuevo párrafo, empieza la argumentación
+            propiamente dicha. <br> Se van ofreciendo argumentos de distinto tipo, de los que hablaremos más adelante, ejemplos y otra serie de recursos que tienen como fin fortalecer la opinión defendida y refutar la contraria. La refutación o rechazo
+            de las ideas contrarias es de gran importancia, pues en ella puede encontrarse el éxito de nuestro objetivo (recordemos: convencer a los demás). Debe prestarse especial atención a los argumentos que empleamos para rechazar ideas contrarias
+            a la nuestra: podemos emplear
+            <br> la ironía, introducir elementos subjetivos, pero siempre desde el respeto y la tolerancia ante las ideas ajenas, sin caer en el insulto o comentarios despectivos que podrían ofender a alguna persona. La conclusión Constituye la última
+            parte de nuestra argumentación. Recuerda que un buen principio es fundamental pero, en este caso, un buen final todavía lo es más. La conclusión recoge un razonamiento lógico derivado de la argumentación precedente: es muy importante que lo
+            que formulemos al final sea coherente con todo lo anterior, de lo contrario, todo el esfuerzo realizado habrá sido inútil. <br><br> Por ultimo decir que <strong style="color: blue;">MBAPPE SE QUEDA EN EL PSG</strong>
+        </p>
+    </div>
+</body>
+
+</html>
