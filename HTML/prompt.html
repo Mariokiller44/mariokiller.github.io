@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Click para iniciar sesion.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+    <img id="miImagen">
+
+    <script>
+        function myFunction() {
+            let person = prompt("Porfavor escribe como te llamas", "Nombre");
+            var imagen4 = document.getElementById('miImagen');
+            if (person != null) {
+                imagen4.src = "https://i.pinimg.com/originals/35/34/a6/3534a608a6e4f596ba23a38497e35dfa.jpg";
+                document.getElementById("demo").innerHTML = person + " a nadie le importas";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
